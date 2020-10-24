@@ -28,7 +28,7 @@ Each object in the notes-array has a key named **note** with a value correspondi
   "notes": [
     {
       "note": "D3",
-      "directory": "C:/Erik/Users/Documents/SomeFolder",
+      "directory": "C:/Users/Erik/Documents/SomeFolder",
       "script": "code .",
       "noteup_script": "git init"
     }
@@ -47,7 +47,7 @@ Each object in the cc-array has a key named **controller** whose value correspon
       "values": [
         {
           "value": "12",
-          "directory": "C:/Erik/Users/Documents/SomeFolder",
+          "directory": "C:/Users/Erik/Documents/SomeFolder",
           "script": "code ."
         },
         {
@@ -67,7 +67,7 @@ Each object in the program-array consists of a **program** key whose value repre
   "program": [
     {
       "program": "1",
-      "directory": "C:/Erik/Users/Documents/SomeFolder",
+      "directory": "C:/Users/Erik/Documents/SomeFolder",
       "script": "code ."
     }
   ]
