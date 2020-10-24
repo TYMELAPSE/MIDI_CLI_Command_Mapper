@@ -22,7 +22,7 @@ Manually input the name of your MIDI device into the constant nameed `INPUT_DEVI
 
 Creating and mapping scripts is done through editing the `commands.json` file.
 
-### Input Notes
+### MIDI Input Notes
 Each object in the notes-array has a key named **note** with a value corresponding to its musical pitch notation. The value of **directory** indicates in which directory the commands will run. If the **directory** doesn't exist or holds an empty value the commands will be run in the current directory. When a MIDI note is sent that matches a value of a note in the notes-array, the value of the **script** key is run as a CLI command. Pressing the D3 key on your MIDI device would in this case run `code .` in C:/Users/Erik/Documents/SomeFolder.
 ```
   "notes": [
