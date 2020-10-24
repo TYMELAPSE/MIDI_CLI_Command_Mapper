@@ -1,0 +1,36 @@
+{
+  "notes": [
+    {
+      "note": "D3",
+      "directory": "C:/",
+      "script": "cd",
+      "noteup_script": "code ."
+    }
+  ],
+
+  "cc": [
+    {
+      "controller": 1,
+      "name": "modwheel",
+      "values": [
+        {
+          "value": "12",
+          "directory": "C:/",
+          "script": "git --version"
+        },
+        {
+          "value": "99",
+          "script": "node -v"
+        }
+      ]
+    }
+  ],
+
+  "program": [
+    {
+      "program": "1",
+      "directory": "C:/",
+      "script": "cd"
+    }
+  ]
+}
