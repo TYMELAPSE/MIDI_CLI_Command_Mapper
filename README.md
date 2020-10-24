@@ -23,17 +23,18 @@ Manually input the name of your MIDI device into the constant nameed `INPUT_DEVI
 Creating and mapping scripts is done through editing the `commands.json` file.
 
 ### Input Notes
-Each object in the notes-array has a key named **note** with a value corresponding to its musical pitch notation. When a MIDI note is sent that matches a value of a note in the notes-array, the value of the **script** key is run as a CLI command. Pressing the D3 key on your MIDI device would in this case run "git --version".
+Each object in the notes-array has a key named **note** with a value corresponding to its musical pitch notation. The value of **directory** indicates in which directory the commands will run. If the **directory** doesn't exist or holds an empty value the commands will be run in the current directory. When a MIDI note is sent that matches a value of a note in the notes-array, the value of the **script** key is run as a CLI command. Pressing the D3 key on your MIDI device would in this case run `code .` in C:/Erik/Users/Documents/SomeFolder.
 ```
-"notes": [
+  "notes": [
     {
       "note": "D3",
-      "script": "git --version",
-      "noteup_script": "node -v"
+      "directory": "C:/Erik/Users/Documents/SomeFolder",
+      "script": "code .",
+      "noteup_script": "git init"
     }
   ]
 ```
-Each object may also include the optional **noteup_script** key. The value for this key would be run when the MIDI note is released. In this case "node -v" would be run upon releasing the D3 key.
+Each object may also include the optional **noteup_script** key. The value for this key would be run when the MIDI note is released. In this case `git init` would be run upon releasing the D3 key, in the same directory as before.
 
 ### MIDI CC
 Each object in the cc-array has a key named **controller** whose value corresponds to the controller number (1 - 127). Each object in the values-array corresponds to a MIDI CC value emitted by the controller. When the controller emites a value present in the values-array, the value of the correspondning **script** key is run.
@@ -45,11 +46,12 @@ Each object in the cc-array has a key named **controller** whose value correspon
       "name": "modwheel",
       "values": [
         {
-          "value": "1",
-          "script": "cd"
+          "value": "12",
+          "directory": "C:/Erik/Users/Documents/SomeFolder",
+          "script": "code ."
         },
         {
-          "value": "2",
+          "value": "99",
           "script": "node -v"
         }
       ]
@@ -62,10 +64,11 @@ The **name** key is optional and only exists to improve the user experience.
 Each object in the program-array consists of a **program** key whose value represents the MIDI program. When the MIDI program is changed to a value present in the program-array, the correpsonding script is run.
 
 ```
- "program": [
+  "program": [
     {
       "program": "1",
-      "script": "node -v"
+      "directory": "C:/Erik/Users/Documents/SomeFolder",
+      "script": "code ."
     }
   ]
 ```
