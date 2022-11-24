@@ -29,8 +29,8 @@ Each object in the notes-array has a key named **note** with a value correspondi
     {
       "note": "D3",
       "directory": "C:/Users/Erik/Documents/SomeFolder",
-      "script": "code .",
-      "noteup_script": "git init"
+      "script": "git add .",
+      "noteup_script": "git commit -m ''"
     }
   ]
 ```
