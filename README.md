@@ -30,7 +30,7 @@ Each object in the notes-array has a key named **note** with a value correspondi
       "note": "D3",
       "directory": "C:/Users/Erik/Documents/SomeFolder",
       "script": "git add .",
-      "noteup_script": "git commit -m ''"
+      "noteup_script": "git status"
     }
   ]
 ```
@@ -52,7 +52,7 @@ Each object in the cc-array has a key named **controller** whose value correspon
         },
         {
           "value": "99",
-          "script": "node -v"
+          "script": "nvm use 14"
         }
       ]
     }
